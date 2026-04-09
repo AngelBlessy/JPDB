@@ -1,0 +1,145 @@
+:root {
+  --bg: #f5f8fc;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --line: #d1d5db;
+  --brand: #0f766e;
+  --brand-dark: #115e59;
+  --warn: #b91c1c;
+  --ok: #166534;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #dbeafe, var(--bg) 60%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.subtitle {
+  margin: 0.45rem 0 1.2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0.8rem 0.9rem;
+  align-items: center;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.62rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  outline: 2px solid #14b8a6;
+  outline-offset: 1px;
+}
+
+input:disabled {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.actions {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--brand);
+}
+
+button:hover:not(:disabled) {
+  background: var(--brand-dark);
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.message {
+  min-height: 1.25rem;
+  margin: 0.9rem 0 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.message.error {
+  color: var(--warn);
+}
+
+.message.success {
+  color: var(--ok);
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  label {
+    margin-top: 0.35rem;
+  }
+
+  .actions {
+    justify-content: stretch;
+  }
+
+  .actions button {
+    flex: 1 1 auto;
+  }
+}
