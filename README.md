@@ -8,9 +8,10 @@
 4. [Scope of Functionalities](#scope-of-functionalities)
 5. [Illustration](#illustration)
 6. [Examples of Use](#examples-of-use)
-7. [Project Status](#project-status)
-8. [Release History](#release-history)
-9. [Sources](#sources)
+7. [Evaluator Instructions](#evaluator-instructions)
+8. [Project Status](#project-status)
+9. [Release History](#release-history)
+10. [Sources](#sources)
 
 ## Title of the Project
 
@@ -66,6 +67,14 @@ Main files in this project:
 4. For a new Roll-No, fill all fields and click Save.
 5. For an existing Roll-No, modify details and click Update.
 6. Click Reset to return to initial form state.
+
+## Evaluator Instructions
+
+1. Open [demo.html](demo.html) first.
+2. This validates the complete form workflow (Save/Update/Reset/state logic) without requiring any token.
+3. For JsonPowerDB cloud verification, open [index.html](index.html).
+4. Use your own JPDB account token by logging in to JPDB and generating a connection token from Tools -> Tokens.
+5. Paste that token in the JPDB Token input field and test Save/Update flow.
 
 ## Project Status
 
